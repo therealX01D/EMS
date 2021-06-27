@@ -1,0 +1,206 @@
+@startuml
+
+title __USERCLASSES's Class Diagram__\n
+
+
+    namespace userClasses {
+      class userClasses.Employee {
+          - birthdate : Date
+          - email : String
+          - events : Event[]
+          - extraCompensations : double
+          - id : String
+          - jobDescription : String
+          - name : String
+          - nationality : String
+          - pass : String
+          - position : String
+          - rank : int
+          - rating : float
+          - salary : int
+          - tasks : Task[]
+          {static} - totalCompletedTasks : int
+          - username : String
+          - vacations : VacationRequest[]
+          + Employee()
+          + getBirthdate(): String
+          + getEmail(): String
+          + getEvents(): String
+          + getExtraCompensations(): String
+          + getGender(): String
+          + getId(): String
+          + getJobDescription(): String
+          + getName(): String
+          + getNationality(): String
+          + getPass(): String
+          + getPosition(): String
+          + getRaiseRequest(): String
+          + getRank(): String
+          + getRating():String
+          + getSalary(): String
+          + getTasks(): String
+          {static} + getTotalCompletedTasks(): int
+          + getTypeOfEmployement(): String
+          + getUsername(): String
+          + getVacations(): String
+          + setBirthdate(): String
+          + setEmail():
+          + setEvents():
+          + setExtraCompensations()
+          + setGender()
+          + setId()
+          + setJobDescription()
+          + setName()
+          + setNationality()
+          + setPass()
+          + setPosition()
+          + setRaiseRequest()
+          + setRank()
+          + setRating()
+          + setSalary()
+          + setTasks()
+          {static} + setTotalCompletedTasks()
+          + setTypeOfEmployement()
+          + setUsername()
+          + setVacations()
+      }
+
+  
+
+      enum Employement {
+        fullTime
+        partTime
+      }
+
+
+      class userClasses.Event {
+          - description : String
+          - endRegisteration : Date
+          - eventDate : Date
+          - id : String
+          - issuingDate : Date
+          - name : String
+          - organizers : String[]
+          - peopleEnrolled : int
+          + Event()
+          + getDescription()
+          + getEndRegisteration()
+          + getEventDate()
+          + getIssuingDate()
+          + getName()
+          + getOrganizers()
+          + getPeopleEnrolled()
+          + setDescription()
+          + setEndRegisteration()
+          + setEventDate()
+          + setIssuingDate()
+          + setName()
+          + setOrganizers()
+          + setPeopleEnrolled()
+      }
+
+
+      enum Gender {
+        female
+        male
+        other
+      }
+
+
+      class userClasses.RaiseRequest {
+          + RaiseRequest()
+          + RaiseRequest()
+          + getEmp()
+          + getStatus()
+          + setEmp()
+          + setStatus()
+      }
+
+
+      enum Status {
+        accepted
+        denied
+        pending
+      }
+
+
+      class userClasses.Task {
+          - completionDate : Date
+          - deadline : Date
+          - description : String
+          - employeeID : String
+          - issuingDate : Date
+          - name : String
+          + Task()
+          + getCompletionDate()
+          + getDeadline()
+          + getDescription()
+          + getEmployeeID()
+          + getIssuingDate()
+          + getName()
+          + setCompletionDate()
+          + setDeadline()
+          + setDescription()
+          + setEmployeeID()
+          + setIssuingDate()
+          + setName()
+      }
+
+
+      class userClasses.Team {
+          - employees : Employee[]
+          - managerID : String
+          - raiseRequests : RaiseRequest[]
+          - rating : float
+          - tasks : Task[]
+          - teamID : String
+          - vacationRequests : VacationRequest[]
+          + Team()
+          + getEmployees()
+          + getManagerID()
+          + getRaiseRequests()
+          + getRating()
+          + getTasks()
+          + getVacationRequests()
+          + setEmployees()
+          + setManagerID()
+          + setRaiseRequests()
+          + setRating()
+          + setTasks()
+          + setVacationRequests()
+      }
+
+
+      class userClasses.VacationRequest {
+          - employeeID : String
+          - endDate : Date
+          - startDate : Date
+          + VacationRequest()
+          + VacationRequest()
+          + getEmployeeID()
+          + getEndDate()
+          + getStartDate()
+          + getStatus()
+          + setEmployeeID()
+          + setEndDate()
+          + setStartDate()
+          + setStatus()
+      }
+
+}
+  userClasses.Employee o-- userClasses.Gender : gender
+  userClasses.Employee o-- userClasses.RaiseRequest : raiseRequest
+  userClasses.Employee o-- userClasses.Employement : typeOfEmployement
+  userClasses.RaiseRequest o-- userClasses.Employee : emp
+  userClasses.RaiseRequest o-- userClasses.Status : status
+  userClasses.VacationRequest o-- userClasses.Status : status
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,37 @@
+.root{
+    -fx-background-color: #222831;
+}
+.label{
+    -fx-text-fill: #eeeeee;
+}
+.button{
+    -fx-background-color: #185adb;
+    -fx-text-fill: #eeeeee;
+    -fx-background-radius: 4;
+}
+.check-box{
+    -fx-background-color: #185adb;
+    -fx-text-fill: #eeeeee;
+}
+.choice-box{
+    -fx-text-fill: #161616;
+}
+.list-view{
+    -fx-text-fill: #eeeeee;
+}
+.table-view{
+    -fx-background-color: #eeeeee;
+    -fx-text-fill: #eeeeee;
+}
+.table-cell{
+    -fx-background-color: #eeeeee;
+    -fx-text-fill: #161616;
+}
+.tab-pane{
+    -fx-background-color: #eeeeee;
+    -fx-text-fill: #161616;
+}
+.list-cell{
+    -fx-background-color: #185adb;
+    -fx-text-fill: #eeeeee;
+}
